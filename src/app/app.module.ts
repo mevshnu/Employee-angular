@@ -9,6 +9,36 @@ import { AddComponent } from './add/add.component';
 import { DeleteComponent } from './delete/delete.component';
 import { ViewComponent } from './view/view.component';
 import { SearchComponent } from './search/search.component';
+import { NavComponent } from './nav/nav.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:EmployeeLoginComponent
+  },
+  {
+    path:"alogin",
+    component:AdminLoginComponent
+  },
+
+{
+  path:"add",
+  component:AddComponent
+},
+{
+  path:"view",
+  component:ViewComponent
+},
+{
+  path:"search",
+  component:SearchComponent
+},
+{
+  path:"delete",
+  component:DeleteComponent
+}
+]
 
 @NgModule({
   declarations: [
@@ -18,11 +48,13 @@ import { SearchComponent } from './search/search.component';
     AddComponent,
     DeleteComponent,
     ViewComponent,
-    SearchComponent
+    SearchComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
