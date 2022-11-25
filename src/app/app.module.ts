@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { NavComponent } from './nav/nav.component';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const myRoute:Routes=[
   {
     path:"",
